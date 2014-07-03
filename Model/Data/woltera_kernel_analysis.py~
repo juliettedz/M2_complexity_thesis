@@ -1,0 +1,12 @@
+import numpy
+import cPickle
+
+
+f = open('spikes.pickle','rb')
+spikes = cPickle.load(f)
+f = open('images.pickle','rb')
+ims = cPickle.load(f)
+
+spike_train = spikes[21]
+print spike_train
+
