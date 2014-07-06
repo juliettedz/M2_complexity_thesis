@@ -43,7 +43,7 @@ kernel_size = h1_dense.shape[0]
 ############
 # Plotting
 ############
-symmetric = 2
+symmetric = 1
 colorbar = True
 closest_square_to_kernel = int(np.sqrt(kernel_size)) ** 2
 
