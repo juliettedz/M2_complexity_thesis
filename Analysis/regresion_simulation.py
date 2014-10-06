@@ -13,8 +13,8 @@ from sklearn.linear_model import LinearRegression  # Import the learning algorit
 ####################
 # Load the data
 ####################
-folder = './data/'
-cell_number = 8
+folder = './data/'  #** Ju **# ajouter FFI_testDataBig_____
+cell_number = 8         #** Ju **# model: x cells, then record from less cells and then analyse even less (= cell_number) cells
 cell = '_cell_' + str(cell_number) 
 quality = '_3000_21_'
 stimuli_type = 'SparseNoise' # Comment the one that is not going to be used 
@@ -46,7 +46,7 @@ f.close()
 
 #Scale and size values
 dt = 1.0  # time sampling (ms)
-dim = 21.0 # duration of the image (ms)
+dim = 21.0 # duration of the image (ms)  #** Ju **# comes from the experiment
 dh = 7.0 # resolution of the kernel (ms)
 
 kernel_duration = 150  # ms

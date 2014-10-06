@@ -18,9 +18,10 @@ def perform_analysis_and_visualization(data_store):
     
     number_of_cells = len(analog_ids)
     stimuli_list = list(('SparseNoise', 'DenseNoise'))
+    #stimuli_list = ['SparseNoise']
     save_to = './Data/'
     
-    
+    print stimuli_list
     for stimuli_type in stimuli_list: 
         print 'Getting voltage and images for ' + stimuli_type
         
@@ -34,7 +35,9 @@ def perform_analysis_and_visualization(data_store):
         stimuli = [MozaikParametrized.idd(s) for s in dsv.get_stimuli()]
         # Take the seeds 
         seeds = [s.experiment_seed for s in stimuli]
-                
+        
+        print seeds,segments,stimuli 
+               
         # Sort them based on their seeds 
         seeds,segments,stimuli = zip(*sorted(zip(seeds,segments,stimuli))) 
         segment_length = segments[0].get_spiketrain(spike_ids[0]).t_stop     

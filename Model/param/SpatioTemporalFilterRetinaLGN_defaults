@@ -12,6 +12,7 @@
         'receptive_field': {
             #'func': 'lambda x,y,t,p: numpy.sin(t)',
             'func': 'cai97.stRF_2d',
+	    'naka_rushton_output_function': None,	
             'func_params': {
                 'Ac': 1.0,
                 'As': 0.3, # changed from 1/3.0

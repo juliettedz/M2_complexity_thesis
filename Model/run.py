@@ -37,7 +37,7 @@ if True:
     
 else: 
     setup_logging()
-    data_store = PickledDataStore(load=True,parameters=ParameterSet({'root_directory':'FFI_combined-high_resolution_3000_21_____', 'store_stimuli' : False}),replace=True)
+    data_store = PickledDataStore(load=True,parameters=ParameterSet({'root_directory':'FFI_test_8_____', 'store_stimuli' : False}),replace=True)
     logger.info('Loaded data store')
 
 if mpi_comm.rank == MPI_ROOT:
