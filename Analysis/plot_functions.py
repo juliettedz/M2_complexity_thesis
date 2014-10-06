@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt 
 from matplotlib.colors import LinearSegmentedColormap
-from functions import calculate_prediction
+from error_functions import calculate_prediction
 
 ## Plot functions
 

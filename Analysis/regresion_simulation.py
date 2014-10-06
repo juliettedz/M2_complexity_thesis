@@ -14,7 +14,8 @@ from sklearn.linear_model import LinearRegression  # Import the learning algorit
 # Load the data
 ####################
 folder = './data/'  #** Ju **# ajouter FFI_testDataBig_____
-cell_number = 8         #** Ju **# model: x cells, then record from less cells and then analyse even less (= cell_number) cells
+cell_number = 3         #** Ju **# model: x cells, then record from less cells and then analyse even less (= cell_number) cells
+
 cell = '_cell_' + str(cell_number) 
 quality = '_3000_21_'
 stimuli_type = 'SparseNoise' # Comment the one that is not going to be used 
