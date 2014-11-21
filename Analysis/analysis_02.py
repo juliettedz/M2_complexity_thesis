@@ -12,14 +12,14 @@ from error_functions import calculate_prediction
 ## Files 
 images_folder = './data/'
 kernels_folder = './kernels/'
-quality = '_3000_21_'
+quality = '_15000_21_'
 stimuli_type_sparse = 'SparseNoise'
 stimuli_type_dense = 'DenseNoise'
 image_format = '.pickle'
 kernel_format = '.npy'
 
 
-number_of_cells = 21
+number_of_cells = 100
 SI_sparse = np.zeros(number_of_cells)
 SI_dense = np.zeros(number_of_cells)
 
@@ -36,7 +36,7 @@ input_to_image  = dt / dim # Transforms input to image
 kernel_to_input = dh / dt  # Transforms kernel to input
 image_to_input = dim / dt
 
-Number_of_images = 2000 # Number of images 
+Number_of_images = 10000 # Number of images 
 Ntraining = int(Number_of_images * dim)
 working_indexes = np.arange(Ntraining)
 
@@ -102,7 +102,7 @@ for cell_number in xrange(number_of_cells):
     
     # Calculate the convolutions
     aux_zeros = np.zeros(np.shape(h1_sparse))
-    
+
     h1_sparse_convoluted = calculate_prediction(training_indexes, kernel_times, delay_indexes, image_indexes, input_to_image, 
                          kernel_to_input, h0, h1_sparse, aux_zeros, ims_sparse, ims_sparse**2)
     
@@ -116,7 +116,7 @@ for cell_number in xrange(number_of_cells):
                          kernel_to_input, h0, aux_zeros, h2_dense, ims_dense, ims_dense**2)
     
     ###  Calculate the SI's 
-    SI_sparse[cell_number] = np.sum(h1_sparse_convoluted*2) / np.sum( h2_sparse_convoluted**2 + h1_sparse_convoluted**2)
+    SI_sparse[cell_number] = np.sum(h1_sparse_convoluted**2) / np.sum( h2_sparse_convoluted**2 + h1_sparse_convoluted**2)
     SI_dense[cell_number] = np.sum(h1_dense_convoluted**2 ) / np.sum( h2_dense_convoluted**2 + h1_dense_convoluted**2)
     
     

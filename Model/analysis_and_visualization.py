@@ -17,6 +17,8 @@ def perform_analysis_and_visualization(data_store):
     spike_ids = param_filter_query(data_store,sheet_name="V1_Exc_L4").get_segments()[0].get_stored_spike_train_ids()
     
     number_of_cells = len(analog_ids)
+    numberOfCells_str = str(number_of_cells)
+    print 'NUMBER OF CELLS' + numberOfCells_str
     stimuli_list = list(('SparseNoise', 'DenseNoise'))
     #stimuli_list = ['SparseNoise']
     save_to = './Data/'
@@ -27,7 +29,7 @@ def perform_analysis_and_visualization(data_store):
         
         # Saving parameters 
         format = '.pickle'
-        quality = '_3000_21_' # This is the number of images followed by the interval that they take in ms 
+        quality = '_15000_21_' # This is the number of images followed by the interval that they take in ms 
         
         # Load the segments 
         dsv = queries.param_filter_query(data_store, sheet_name="V1_Exc_L4",st_name=stimuli_type)

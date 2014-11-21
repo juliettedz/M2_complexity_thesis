@@ -1,4 +1,11 @@
-from functions import *
+#*************************************************************************#
+
+# Estimates the volterra kernels for 1 cell from Cyril's data
+# HOW MANY CELLS ???
+
+#*************************************************************************#
+
+#from functions import *
 from plot_functions import plot_mutliplot_bilinear
 from analysis_functions import *
 import numpy as np

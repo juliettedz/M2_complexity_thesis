@@ -46,7 +46,8 @@ def positive_time_trace(x, y , time_window, image_to_input, V, ims):
     # Get the traces
     for index in positive_index:
         positive_time_trace += V[index: index + time_window]
-        
+    
+    # Calculate the mean over all the positive time traces    
     positive_time_trace = positive_time_trace / positive_index.size
 
     return positive_time_trace

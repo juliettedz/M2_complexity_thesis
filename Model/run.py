@@ -40,7 +40,7 @@ else:
     setup_logging()
     data_store = PickledDataStore(load=True,parameters=ParameterSet
 # Ju # change the name of the test you want to transform into data
-({'root_directory':'FFI_testDataBig_____', 'store_stimuli' : False}),replace=True)
+({'root_directory':'FFI_test3_smallVF_____', 'store_stimuli' : False}),replace=True)
     logger.info('Loaded data store')
 
 if mpi_comm.rank == MPI_ROOT:

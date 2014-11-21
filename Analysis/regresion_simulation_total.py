@@ -1,4 +1,4 @@
-from functions import *
+# from functions import *
 from analysis_functions import *
 from plot_functions import *
 import numpy as np
@@ -9,7 +9,7 @@ import os
 
 from sklearn.linear_model import LinearRegression  # Import the learning algorithm
 
-number_of_cells = 21
+number_of_cells = 100
 
 for cell_number in xrange(number_of_cells): 
     print '********************************************'
@@ -21,7 +21,7 @@ for cell_number in xrange(number_of_cells):
     folder = './data/'
     #cell_number = 8
     cell = '_cell_' + str(cell_number) 
-    quality = '_3000_21_'
+    quality = '_15000_21_'
     stimuli_type = 'SparseNoise'
     #stimuli_type = 'DenseNoise'
     file_format = '.pickle'
@@ -180,8 +180,8 @@ for cell_number in xrange(number_of_cells):
         if remove_axis:
             #Remove axis 
             for i in xrange(closest_square_to_kernel):
-            figure.get_axes()[i].get_xaxis().set_visible(False)
-            figure.get_axes()[i].get_yaxis().set_visible(False)
+            	figure.get_axes()[i].get_xaxis().set_visible(False)
+            	figure.get_axes()[i].get_yaxis().set_visible(False)
         
         figure.set_size_inches(16, 12)
         plt.savefig(save_filename, dpi = 100)
@@ -198,8 +198,8 @@ for cell_number in xrange(number_of_cells):
         if remove_axis:
             # Remove axis 
             for i in xrange(closest_square_to_kernel):
-            figure.get_axes()[i].get_xaxis().set_visible(False)
-            figure.get_axes()[i].get_yaxis().set_visible(False)
+            	figure.get_axes()[i].get_xaxis().set_visible(False)
+            	figure.get_axes()[i].get_yaxis().set_visible(False)
         
         figure.set_size_inches(16, 12)
         plt.savefig(save_filename, dpi = 100)

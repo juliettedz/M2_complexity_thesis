@@ -1,3 +1,9 @@
+#*************************************************************************#
+
+# Estimates the volterra kernels for 1 cell (cell_number) from the simulation
+
+#*************************************************************************#
+
 from analysis_functions import downsample
 from plot_functions import *
 from store_functions import store_X, store_kernel_numpy
@@ -13,13 +19,13 @@ from sklearn.linear_model import LinearRegression  # Import the learning algorit
 ####################
 # Load the data
 ####################
-folder = './data/'  #** Ju **# ajouter FFI_testDataBig_____
-cell_number = 3         #** Ju **# model: x cells, then record from less cells and then analyse even less (= cell_number) cells
+folder = './data/'  
+cell_number = 3         #** Ju **# model: x cells, then record from less cells and then analyse even less (choose 1 = cell_number) cells
 
 cell = '_cell_' + str(cell_number) 
 quality = '_3000_21_'
 stimuli_type = 'SparseNoise' # Comment the one that is not going to be used 
-stimuli_type = 'DenseNoise'
+# stimuli_type = 'DenseNoise'
 file_format = '.pickle'
 filename_vm = folder + 'vm' + cell + quality + stimuli_type + file_format
 filename_images = folder + 'images'+ quality + stimuli_type + file_format
@@ -48,7 +54,7 @@ f.close()
 #Scale and size values
 dt = 1.0  # time sampling (ms)
 dim = 21.0 # duration of the image (ms)  #** Ju **# comes from the experiment
-dh = 7.0 # resolution of the kernel (ms)
+dh = 7.0 # resolution of the kernel (ms)  #** Ju **# why not 4.0 as done for the experiment
 
 kernel_duration = 150  # ms
 kernel_size = int(kernel_duration / dh) 

@@ -13,7 +13,7 @@ stimuli_type_dense = 'DenseNoise'
 image_format = '.pickle'
 kernel_format = '.npy'
 
-cell_number = 10
+cell_number = 1
 delay = 1
 collapse_to = 5
 
