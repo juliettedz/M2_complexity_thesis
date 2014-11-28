@@ -38,7 +38,7 @@ for cell_number in xrange(number_of_cells):
     f = open(filename_images,'rb' )
     ims = cPickle.load(f)
     ims = ims / 100
-    ims = ims - 0.5
+    #ims = ims - 0.5
     #ims = ims - 50.0
     ims2 = ims**2
     Nside = ims.shape[2]

@@ -18,7 +18,7 @@ kernel_format = '.npy'
 remove_axis = True # Remove axis if True 
 show_plot = True # Show or not the plot
 
-number_of_cells_to_plot = 2
+number_of_cells_to_plot = 20
 list_cells = np.arange(1, number_of_cells_to_plot +1 )
 
 
@@ -57,7 +57,7 @@ for i, cell_number in enumerate(list_cells):
     print '****************'
     print 'plotting cell number ' + cell_number 
    #symmetric = 1
-    symmetric = 2
+    symmetric = 0
     colorbar = True
     closest_square_to_kernel = int(np.sqrt(kernel_size)) ** 2
     aux1=-0.70 

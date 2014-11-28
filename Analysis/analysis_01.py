@@ -11,14 +11,14 @@ import os
 ## Files 
 images_folder = './data/'
 kernels_folder = './kernels/'
-quality = '_15000_21_'
+quality = '_15000_21_' # _NumOfImages_NumOfCells
 stimuli_type_sparse = 'SparseNoise'
 stimuli_type_dense = 'DenseNoise'
 image_format = '.pickle'
 kernel_format = '.npy'
 
 
-number_of_cells = 100
+number_of_cells = 1
 SI_sparse = np.zeros(number_of_cells)
 SI_dense = np.zeros(number_of_cells)
 gain1 = np.zeros(number_of_cells)
